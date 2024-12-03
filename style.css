@@ -1,0 +1,292 @@
+/*ESTILO GERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Montserrat", serif;
+}
+
+body, html {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    background-image: url('assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.interface {
+    width: 640px;
+    display: flex;
+}
+
+
+/* ESTILO DO CABEÇALHO */
+.principal {
+    display: flex;
+}
+
+header {
+    text-align: left;
+}
+
+header>.interface {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+    padding: 0px 0%;
+}
+
+.topo-do-site h1 {
+    color: #fff;
+    font-size: 27px;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.topo-do-site h1 span{
+    font-size: 25px;
+    color:#7c46ff;
+    margin-right: 10px;
+}
+
+.topo-do-site p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.topo-do-site h2 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.pergunta {
+    width: 400px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 0;
+}
+
+ul li label {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+input[type="radio"]:checked {
+    background-color: #4CAF50; /* Cor quando selecionado */
+    border-color: #4CAF50;
+}
+
+input[type="radio"] {
+    width: 30px;
+    height: 15px;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: 2px solid #007BFF;
+    transition: background-color 0.3s ease;
+}
+
+/* ESTIO DO FORMULÁRIO*/
+section.formulario {
+    padding: 0px 0%;
+}
+
+form {
+    max-width: 620px;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid white;
+    border-color: #fff;
+    outline: 10;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: none;
+    height: 127px;
+}
+
+button {
+    margin-top: 20px;
+    text-align: left;
+    width: 115px;
+    height: 45px;
+    background-color: #d3d3d3;
+    opacity: 0.1;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: 0;
+    outline: 0;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: .4s;
+    pointer-events: none; /* Impede clique se não habilitado */
+}
+
+button.enabled {
+    color: #000;
+    background-color: #9be6ff;
+    opacity: 1.0;
+    pointer-events: auto; /* Permite clique */
+    cursor: pointer;
+}
+
+button.enabled:hover {
+    box-shadow: 0px 0px 8px #a4a7a471;
+    transform: scale(1.05);
+    transition: .4s;
+    color: #fff;
+    background-color: #1081a7;
+    cursor: pointer;
+}
+
+.subtitulo p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 13px;
+    margin-left: 243px;
+}
+
+.aviso p {
+    font-size: 12px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+/* ESTILO RODAPÉ */
+
+.borda {
+    margin-top: 10px;
+    border-top: 4px solid #292961;
+    border-radius: 7px;
+    width: 74px;
+    display: inline-block;
+}
+
+.borda-grande {
+    margin-top: 10px;
+    border-top: 4px solid #9be6ff;
+    border-radius: 7px;
+    width: 625px;
+    display: inline-block;
+}
+
+.borda-white {
+    margin-top: 10px;
+    border-top: 4px solid #fff;
+    border-radius: 7px;
+    width: 74px;
+    display: inline-block;
+}
+
+.borda-certo {
+    margin-top: 10px;
+    border-top: 4px solid #9be6ff;
+    border-radius: 7px;
+    width: 74px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 1080px) {
+
+    /* CLASSES GERAIS */
+    .interface {
+        max-width: 370px;
+        height: 600px;
+    }
+
+    /* ESTILO DO CABEÇALHO */
+    .principal {
+        display: flex;
+    }
+
+    header {
+        text-align: left;
+    }
+
+    /* TOPO DO SITE */
+    section.topo-do-site {
+        padding: 10px 0%;
+        margin-right: 1px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    .topo-do-site p {
+        text-align: left;
+    }
+
+    /* ESTILO FORMULÁRIO */
+    .subtitulo p {
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 5px;
+        margin-left: 73px;
+    }
+
+    .aviso p {
+        margin-top: 30px;
+        display: flex;
+        max-width: 320px;
+    }
+
+    form {
+        max-width: 320px;
+    }
+
+    /* ESTILO RODAPÉ */
+
+    .borda {
+        display: none;
+    }
+
+    .borda-grande {
+        display: none;
+    }
+
+    .borda-white {
+        display: none;
+    }
+
+    .borda-certo {
+        display: none;
+    }
+
+}

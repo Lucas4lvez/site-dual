@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/Asset.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/Asset.png">
+     <!-- FIM GOOGLE FONTS -->
+    <!--BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--FIM BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="scri pt.js"></script> -->
+    <script src="js/script.js" defer></script>
+    <script src="js/click.js" defer></script>
+    <title>Dual Educação</title>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="principal">
+                <div class="image"><img src="assets/Asset 7.png" alt="logo"></div>
+                <div class="subtitulo">
+                    <p>Dual Programas Imersivos</p>
+                </div>
+            </div>
+            <div class="borda-certo">
+                <i class="bi bi"></i>
+            </div>
+            <div class="borda-certo">
+                <i class="bi bi"></i>
+            </div>
+            <div class="borda-certo">
+                <i class="bi bi"></i>
+            </div>
+            <div class="borda-certo">
+                <i class="bi bi"></i>
+            </div>
+            <div class="borda-certo">
+                <i class="bi bi"></i>
+            </div>
+            <div class="borda-white">
+                <i class="bi bi"></i>
+            </div>
+            <div class="borda">
+                <i class="bi bi"></i>
+            </div>
+            <div class="borda">
+                <i class="bi bi"></i>
+            </div>
+        <section class="topo-do-site" id="nome">
+            <div class="txt-topo-site">
+                <h2 form="email" style="white-space: nowrap">7. E qual a sua média salarial?</h2>
+                    <div class="pergunta">
+                        <h2 id="question">Escolha uma das opções</h2>
+                        <ul>
+                            <li>
+                                <input type="radio" name="answer" id="1" class="answer" value="+30mil">
+                                <label for="1" id="option1">Acima de R$ 30.000,00 ao mês</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="answer" id="2" class="answer" value="15/30mil">
+                                <label for="2" id="option2">De R$ 15.000,00 a R$ 30.000,00l</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="answer" id="3" class="answer" value="5/15mil">
+                                <label for="3" id="option3">De R$ 5.000,00 a R$ 15.000,00</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="answer" id="4" class="answer" value="1/5mil">
+                                <label for="4" id="option4">De R$ 1.412,00 a R$ 5.000,00</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="answer" id="5" class="answer" value="1mil">
+                                <label for="5" id="option5">Até R$ 1.412,00 ao mês</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <section class="formulario">
+                        <button id="nextButton" class="nextButton">Confirmar ➔</button>
+                    </section>
+
+                <script>
+                // Seleciona todos os elementos de entrada do tipo rádio
+                const radioButtons = document.querySelectorAll('input[name="answer"]');
+                const nextButton = document.getElementById('nextButton');
+
+                // Função que habilita o botão se algum rádio for selecionado
+                function checkSelection() {
+                    // Verifica se algum rádio está selecionado
+                    const isSelected = Array.from(radioButtons).some(radio => radio.checked);
+
+                    // Habilita ou desabilita o botão com base na seleção
+                    if (isSelected) {
+                        nextButton.classList.add('enabled'); // Habilita visualmente
+                    } else {
+                        nextButton.classList.remove('enabled'); // Desabilita visualmente
+                    }
+                }
+
+                // Adiciona um listener de evento para cada botão de rádio
+                radioButtons.forEach(radio => {
+                    radio.addEventListener('change', checkSelection);
+                });
+
+                // Função para redirecionar o usuário para a página correta
+                function redirecionar() {
+                    // Verifica se o botão está habilitado
+                    if (!nextButton.classList.contains('enabled')) return;
+
+                    // Obtém a opção selecionada
+                    const resposta = document.querySelector('input[name="answer"]:checked');
+
+                    // Mapeia as respostas para as páginas correspondentes
+                    if (resposta) {
+                        switch (resposta.value) {
+                            case '+30mil':
+                                window.location.href = 'index9.html'; // Página para reunião
+                                break;
+                            case '15/30mil':
+                                window.location.href = 'index9.html'; // Página para reunião
+                                break;
+                            case '5/15mil':
+                                window.location.href = 'index9.html'; // Página para reunião
+                                break;
+                            case '1/5mil':
+                                window.location.href = 'index10.html'; // Página para cursos
+                                break;
+                            case '1mil':
+                                window.location.href = 'index10.html'; // Página para cursos
+                                break;
+                            default:
+                                alert('Por favor, selecione uma opção válida.');
+                                break;
+                        }
+                    } else {
+                        alert('Por favor, selecione uma opção.'); // Alerta caso nenhuma opção tenha sido selecionada
+                    }
+                }
+
+                // Adiciona o evento de clique no botão para redirecionar
+                nextButton.addEventListener('click', redirecionar);
+                </script>
+            </div><!--txt-topo-site-->
+        </section><!--topo-site-->
+        </div><!--interface-->
+    </header><!--header-->
+
+</body>
+</html>
